@@ -8,6 +8,7 @@
 }
 
 .container{
+    width: 100%;
     width: 1180px;
     margin: 0 auto;
 }
@@ -16,17 +17,19 @@
     margin: 0;
     padding: 0;
     color: white;
+  
     
 }
 
 .banner{
     width: 100%;
-    /* height: 100vh; */
+    height: 1000px;
     background:url('../images/header.jpg');
     background-position: center;
     background-size: cover;
     color: white;
     font-family: 'Poppins';
+    position: relative;
 
 }
 
@@ -41,14 +44,39 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
-.logo h1{
+.flex-vertical{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo p a{
   font-size: 4rem;  
   font-weight: 500;
   
 	-webkit-text-stroke: 2px #000000;
 
+}
+.about-img{
+    float: right;
+}
+
+.about-us-section{
+    width: 100%;
+    background-image: url('/images/about-img.jpg');
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size:  50% 100%;
+    
+    
+}
+
+.about-content{
+    width: 50%;
 }
 
 ul{
@@ -57,7 +85,7 @@ ul{
 
 ul li{
     display: inline-block;
-    padding-top: 20px;
+    
 }
 
 a{
@@ -65,21 +93,31 @@ a{
     padding-top: 90px;
     padding-bottom: 39px;
     color: white;
+    font-weight: 500;
     text-decoration: none;
+    transition: all 0.3s ease-in;
 }
 
-a:hover{
+ .menu a:hover{
     background-color: var(--yellow);
+    
 }
 
-.banner-content-space{
-    padding: 200px 0px;
+.banner-wallpaper-content-row{
+    width: inherit;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
 }
 span{
     color: var(--yellow);
 }
 
 .banner-content{
+    
+
     text-align: center;
     background:linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
     padding: 50px;
@@ -113,23 +151,355 @@ span{
 .banner-content button{
     padding: 10px 80px;
     margin-top: 15px;
+    font-weight: 700;
     background: transparent;
     border: 1px solid white;
+    transition: all 0.2s ease-in;
 }
 
 
 .banner-content button:hover{
     background: var(--yellow);
+    border-color:var(--yellow) ;
+    color: black;
 }
 
-i{
-    background: grey;
-    padding: 10px 2px;
+.banner-wallpaper-content-row i{
+    background: linear-gradient( rgba(153, 123, 123, 0.2),rgba(153, 123, 123, 0.2));
+    font-size: 2rem;
+    padding: 20px 5px;
     color: var(--yellow);
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
-i:hover{
+.banner-wallpaper-content-row i:hover{
     background: var(--yellow);
+    color: black;
+    transition: all 0.5s ease-in;
 }
+
+.about-content p,h2{
+    color: black;
+   
+
+}
+
+.about-content{
+    position: relative;
+}
+
+
+
+
+.about-content h2::after{
+    content: '';
+    width: calc(90%);
+    height: 3px;
+    background: linear-gradient(to right, rgba(0,0,0,1) 50% ,rgb(252, 240, 6) 50%);
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%,-72%);
+}
+
+.about-content p{
+    text-align: justify;
+    padding: 30px ;
+}
+
+.about-content h2{
+    padding-top: 50px;
+}
+
+
+
+.about-content{
+    text-align: center;
+}
+.gap{
+    gap:20px;
+}
+
+.team-description{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background:linear-gradient( rgba(0,0,0,0.8),rgba(0,0,0,0.3)) ,url('../images/team-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.team-headeing h2{
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.team-head{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+
+}
+
+.team-member-profile{
+    padding-top: 50px;
+}
+
+.card i{
+    background: transparent;
+    padding-bottom: 30px;
+}
+
+.card {
+    background-color: white;
+}
+
+.card h3{
+    padding-top: 30px;
+    color: black;
+
+}
+
+.card:hover{
+    transform: scaleY(1.1);
+    transition: all 0.5s ease-out;
+}
+
+.card a{
+    padding: 0;
+    
+}
+
+.card a i{
+    color: yellow;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+.card a i:hover{
+    background-color: orangered;
+    border-radius: 50%;
+}
+
+
+
+
+.card p{
+    padding-top: 10px;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.flex-end{
+    display: flex;
+    align-items: center;
+   justify-content: end;
+}
+
+.services-section{
+    width: 100%;
+    background-image: url('/images/services-img.jpg');
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size:  50% 100%;
+}
+
+.services-tag-bg{
+    background:linear-gradient( rgba(0,0,0,0.8),rgba(0,0,0,0.3)) ,url('../images/services-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 1000px;
+}
+
+.services-cards{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.services-card{
+    position: relative;
+    
+}
+
+.team-cards{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* .top-icon{
+    padding: 10px;
+    border-radius: 50%;
+    
+    
+} */
+
+.top-icon i{
+    background: none;
+    color: black;
+    font-size: 40px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translate(-50%,-50%);
+    
+    
+}
+
+.team-heads .card:hover .card{
+    transform: scale(1);
+}
+
+.top-icon i:hover{
+    background-color: yellow;
+    transition: all o.2s ease-in;
+    
+}
+
+.card-body a i:hover{
+    color: red;
+   
+}
+
+.services-card:hover{
+    transform: scaleY(1.1);
+    transition: all 0.5s linear;
+}
+
+.services-card:hover .top-icon i{
+    background: yellow;
+    transition: all 0.2s ease-in;
+}
+
+.card > a{
+    padding: 0px;
+}
+
+
+
+.card-head{
+    background-image: linear-gradient(177deg, rgb(62, 196, 65) 30%, rgb(16, 225, 16) 30%);
+}
+
+.card-head-orange{
+    background-image: linear-gradient(177deg, rgb(218, 113, 4) 30%, rgb(255, 133, 0) 30%);
+}
+
+.card-head-blue{
+    background-image: linear-gradient(177deg, rgb(4, 130, 217) 30%, rgb(1, 149, 255) 30%);
+}
+
+.card-head-blue-red{
+    background-image: linear-gradient(177deg, rgb(207, 81, 5) 30%, rgb(255, 97, 0) 30%);
+}
+.card-head{
+    text-align: center;
+}
+
+.card-head h2{
+    padding: 80px;
+    color: white;
+}
+
+.card-head p{
+    padding: 30px;
+}
+
+.card-body{
+    
+    background:linear-gradient(177deg ,#ffff 78%,rgb(16, 225, 16) 22%);
+    padding: 30px;
+    text-align: center;
+}
+
+.card-body-orange{
+    background:linear-gradient(177deg ,#ffff 78%,rgb(218, 113, 4) 22%);
+    padding: 30px;
+    text-align: center;
+}
+
+
+.card-body-blue{
+    background:linear-gradient(177deg ,#ffff 78%,rgb(4, 130, 217) 22%);
+    padding: 30px;
+    text-align: center;
+}
+
+.card-body-red{
+    background:linear-gradient(177deg ,#ffff 78%,rgb(207, 81, 5) 22%);
+    padding: 30px;
+    text-align: center;
+}
+
+
+.card-body p,h3{
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.fact{
+    background:rgb(34, 34, 34);
+    position: relative;
+    width: 100%;
+    height: 500px;
+
+}
+
+
+.fact-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: inherit;
+    text-align: center;
+    
+}
+
+.fact-content h2{
+    color: white;
+    font-size: 2rem;
+}
+
+.fact i{
+    background: none;
+    font-size: 2rem;
+    color: yellow;
+}
+
+.tag-des p,span{
+    padding-top: 8px;
+}
+
+.fact i:hover{
+    transform: scale(1.2);
+    transition: all 0.2s ease-in;
+}
+
+.card-body i{
+    position: absolute;
+    top: 90%;
+    transform: translateY(-10%);
+    background: transparent;
+    color: white;
+}
+
+/* .services-card a:hover{
+    background: none;
+} */
+
 
